@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>앵무새성별검사센터 | 앵무새 DNA 성별검사 전문</title>
+  <meta name="description" content="앵무새성별검사센터는 앵무새의 깃털 또는 혈액을 이용한 DNA 성별검사를 안내합니다. 의뢰절차, 검사기간, 비용, 샘플채취방법과 자주 묻는 질문을 확인하세요.">
+  <meta name="keywords" content="앵무새성별검사, 앵무새 DNA 검사, 앵무새DNA, 앵무새 성별, DNA 성별검사, 앵무새 검사">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="앵무새성별검사센터">
+  <meta property="og:description" content="앵무새 DNA 성별검사 전문 안내">
+  <meta property="og:type" content="website">
+  <style>
+    :root{
+      --green:#1f6b55;
+      --green-dark:#164b3d;
+      --mint:#eaf6f0;
+      --cream:#fbfaf6;
+      --text:#20302a;
+      --muted:#65746e;
+      --line:#dce8e2;
+      --white:#fff;
+      --accent:#d7a94d;
+      --shadow:0 14px 40px rgba(22,75,61,.10);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Malgun Gothic",Arial,sans-serif;
+      color:var(--text);
+      background:var(--cream);
+      line-height:1.75;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(220,232,226,.9);
+    }
+    .nav{
+      min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+    }
+    .logo{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--green-dark);font-size:18px}
+    .logo-mark{
+      width:38px;height:38px;border-radius:50%;
+      display:grid;place-items:center;background:var(--green);color:#fff;font-size:21px;
+      box-shadow:0 5px 14px rgba(31,107,85,.22);
+    }
+    .menu{display:flex;gap:22px;align-items:center;font-size:14px;font-weight:600;color:#43534d}
+    .menu a:hover{color:var(--green)}
+    .menu-btn{display:none;border:0;background:transparent;font-size:27px;cursor:pointer}
+    .hero{
+      background:
+        radial-gradient(circle at 88% 15%, rgba(215,169,77,.22), transparent 23%),
+        radial-gradient(circle at 8% 85%, rgba(31,107,85,.12), transparent 27%),
+        linear-gradient(135deg,#eef8f3 0%,#fbfaf6 58%,#f7f0dd 100%);
+      padding:86px 0 78px;
+      overflow:hidden;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      color:var(--green);font-size:13px;font-weight:800;letter-spacing:.06em;
+      margin-bottom:13px;
+    }
+    .eyebrow:before{content:"";width:28px;height:2px;background:var(--accent)}
+    h1{font-size:clamp(38px,5vw,64px);line-height:1.13;letter-spacing:-.045em;margin:0 0 22px;color:var(--green-dark)}
+    .hero p{font-size:17px;color:#53635c;max-width:620px;margin:0 0 30px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 20px;border-radius:999px;font-weight:800;font-size:14px;
+      border:1px solid transparent;transition:.2s;
+    }
+    .btn-primary{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(31,107,85,.20)}
+    .btn-primary:hover{background:var(--green-dark);transform:translateY(-1px)}
+    .btn-light{background:#fff;border-color:var(--line);color:var(--green-dark)}
+    .hero-art{
+      min-height:390px;border-radius:34px;background:rgba(255,255,255,.72);
+      border:1px solid rgba(255,255,255,.85);box-shadow:var(--shadow);
+      display:grid;place-items:center;position:relative;overflow:hidden;
+    }
+    .hero-art:before,.hero-art:after{
+      content:"";position:absolute;border-radius:50%;filter:blur(1px);
+    }
+    .hero-art:before{width:250px;height:250px;background:#dff1e8;top:-70px;right:-50px}
+    .hero-art:after{width:190px;height:190px;background:#f6e7bd;bottom:-70px;left:-50px}
+    .bird{
+      width:230px;height:260px;position:relative;z-index:2;
+      transform:rotate(-3deg);
+    }
+    .bird-body{
+      position:absolute;width:145px;height:190px;left:43px;top:53px;
+      background:linear-gradient(145deg,#3c9272,#1f6b55);
+      border-radius:54% 46% 48% 52%;
+      box-shadow:inset -16px -18px 0 rgba(0,0,0,.08);
+    }
+    .bird-head{
+      position:absolute;width:122px;height:122px;left:79px;top:12px;
+      background:#e7c45d;border-radius:52% 48% 48% 52%;
+    }
+    .bird-eye{
+      position:absolute;width:21px;height:21px;border-radius:50%;background:#1b2823;
+      left:148px;top:51px;box-shadow:0 0 0 6px #fff;
+    }
+    .bird-beak{
+      position:absolute;left:186px;top:72px;width:42px;height:30px;
+      background:#d89545;clip-path:polygon(0 0,100% 50%,0 100%);
+    }
+    .bird-wing{
+      position:absolute;width:92px;height:145px;left:50px;top:75px;
+      background:#26765c;border-radius:60% 40% 60% 45%;transform:rotate(17deg);
+      box-shadow:inset -9px -8px 0 rgba(0,0,0,.07);
+    }
+    .bird-tail{
+      position:absolute;left:65px;top:205px;width:82px;height:62px;
+      background:#205c4b;clip-path:polygon(0 0,100% 0,65% 100%,36% 74%);
+      transform:rotate(8deg);
+    }
+    .bird-foot{position:absolute;width:56px;height:7px;background:#a76d38;border-radius:10px;left:91px;top:243px}
+    .dna-card{
+      position:absolute;right:28px;bottom:28px;z-index:4;
+      background:#fff;border:1px solid var(--line);border-radius:17px;
+      padding:13px 16px;box-shadow:0 9px 25px rgba(0,0,0,.08);
+      font-size:13px;font-weight:800;color:var(--green-dark)
+    }
+    section{padding:82px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+    .section-head .tag{color:var(--green);font-size:13px;font-weight:800}
+    h2{font-size:clamp(28px,4vw,40px);line-height:1.25;letter-spacing:-.035em;margin:8px 0 12px;color:var(--green-dark)}
+    .section-head p{margin:0;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+      padding:28px;box-shadow:0 8px 28px rgba(22,75,61,.055);
+    }
+    .icon{
+      width:46px;height:46px;border-radius:14px;background:var(--mint);
+      color:var(--green);display:grid;place-items:center;font-size:22px;margin-bottom:16px;
+    }
+    .card h3{margin:0 0 8px;font-size:19px;color:var(--green-dark)}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .process{background:#f2f8f5}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}
+    .num{font-size:13px;color:var(--accent);font-weight:900;letter-spacing:.08em}
+    .step h3{margin:6px 0 8px;color:var(--green-dark);font-size:18px}
+    .step p{margin:0;color:var(--muted);font-size:14px}
+    .price-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+    .price-card{background:var(--green-dark);color:#fff;border-radius:28px;padding:35px}
+    .price-card .small{opacity:.75;font-size:13px}
+    .price{font-size:46px;font-weight:900;letter-spacing:-.04em;margin:7px 0 16px}
+    .price-card ul{padding-left:20px;margin:0;color:#e7f2ed;font-size:14px}
+    .info-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:32px}
+    .info-card h3{color:var(--green-dark);margin-top:0}
+    .info-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid #edf2ef;font-size:14px}
+    .info-row:last-child{border-bottom:0}
+    .info-row b{color:var(--green-dark)}
+    .sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .sample{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
+    .sample h3{color:var(--green-dark);margin-top:0}
+    .sample ol{padding-left:21px;color:var(--muted);font-size:14px}
+    .notice{margin-top:20px;background:#fff7e5;border:1px solid #f0dfb4;border-radius:17px;padding:16px 18px;font-size:13px;color:#6d5729}
+    .faq{max-width:850px;margin:auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:11px;padding:0 20px}
+    summary{cursor:pointer;padding:19px 0;font-weight:800;color:var(--green-dark)}
+    details p{margin:0;padding:0 0 20px;color:var(--muted);font-size:14px}
+    .contact{background:linear-gradient(135deg,#edf7f2,#fff)}
+    .contact-box{
+      background:#fff;border:1px solid var(--line);border-radius:28px;padding:38px;
+      display:grid;grid-template-columns:1.1fr .9fr;gap:30px;box-shadow:var(--shadow)
+    }
+    .contact-box h2{margin-top:0}
+    .contact-list{display:grid;gap:12px}
+    .contact-item{padding:14px 16px;background:#f6faf8;border-radius:14px;font-size:14px}
+    .contact-item b{display:block;color:var(--green-dark);margin-bottom:2px}
+    footer{background:#143d32;color:#cfe0da;padding:34px 0;font-size:13px}
+    footer strong{color:#fff}
+    .footer-flex{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    @media(max-width:850px){
+      .menu{display:none;position:absolute;left:4%;right:4%;top:68px;background:#fff;padding:15px;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}
+      .menu.open{display:flex}
+      .menu a{padding:8px 10px}
+      .menu-btn{display:block}
+      .hero-grid,.price-wrap,.sample-grid,.contact-box{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .hero{padding-top:55px}
+      .hero-art{min-height:330px}
+    }
+    @media(max-width:520px){
+      .steps{grid-template-columns:1fr}
+      section{padding:62px 0}
+      .hero-art{min-height:290px}
+      .bird{transform:scale(.82) rotate(-3deg)}
+      .price{font-size:38px}
+      .contact-box,.price-card,.info-card,.sample,.card{padding:24px}
+      .footer-flex{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home" aria-label="앵무새성별검사센터 홈">
+      <span class="logo-mark">🦜</span>
+      <span>앵무새성별검사센터</span>
+    </a>
+    <button class="menu-btn" aria-label="메뉴 열기" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+    <nav class="menu">
+      <a href="#about">DNA성별검사란?</a>
+      <a href="#process">의뢰절차</a>
+      <a href="#price">소요시간·가격</a>
+      <a href="#sample">샘플채취방법</a>
+      <a href="#faq">자주하는질문</a>
+      <a href="#contact">주소·연락처</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">PARROT DNA SEX DETERMINATION</div>
+        <h1>앵무새의 성별,<br>DNA로 확인하세요.</h1>
+        <p>
+          외형만으로 성별을 구별하기 어려운 앵무새를 대상으로
+          DNA를 이용한 성별검사 정보를 안내합니다.
+          검사 의뢰부터 샘플채취, 결과 확인까지 필요한 내용을 한곳에서 확인하실 수 있습니다.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#process">검사 의뢰방법 보기</a>
+          <a class="btn btn-light" href="#price">검사비용 확인</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="앵무새와 DNA를 표현한 일러스트">
+        <div class="bird">
+          <div class="bird-body"></div>
+          <div class="bird-head"></div>
+          <div class="bird-eye"></div>
+          <div class="bird-beak"></div>
+          <div class="bird-wing"></div>
+          <div class="bird-tail"></div>
+          <div class="bird-foot"></div>
+        </div>
+        <div class="dna-card">🧬 DNA SEX TEST</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">DNA SEX DETERMINATION</span>
+        <h2>DNA 성별검사란?</h2>
+        <p>앵무새의 성별을 외형이 아닌 유전적 정보를 이용해 확인하는 검사입니다.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🧬</div>
+          <h3>DNA를 이용한 검사</h3>
+          <p>앵무새의 DNA에서 성염색체와 관련된 유전 정보를 분석하여 성별을 확인합니다.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🦜</div>
+          <h3>외형으로 구별하기 어려운 종</h3>
+          <p>암수의 외형 차이가 작거나 개체에 따라 차이가 큰 앵무새의 성별 확인에 활용할 수 있습니다.</p>
+        </article>
+        <article class="card">
+          <div class="icon">✓</div>
+          <h3>번식·사육 계획에 활용</h3>
+          <p>짝 구성, 번식 계획, 개체 관리 등을 위한 성별 확인 자료로 활용할 수 있습니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">HOW IT WORKS</span>
+        <h2>검사 의뢰 절차</h2>
+        <p>처음 의뢰하시는 분도 순서대로 따라오실 수 있도록 간단하게 안내합니다.</p>
+      </div>
+      <div class="steps">
+        <article class="step"><div class="num">STEP 01</div><h3>문의 및 신청</h3><p>검사할 앵무새의 종류와 개체 수를 알려주시고 검사 방법을 확인합니다.</p></article>
+        <article class="step"><div class="num">STEP 02</div><h3>샘플 채취</h3><p>안내된 방법에 따라 깃털 또는 검사 가능한 샘플을 준비합니다.</p></article>
+        <article class="step"><div class="num">STEP 03</div><h3>샘플 발송</h3><p>신청 정보를 함께 작성하여 안내받은 방법으로 샘플을 보내주세요.</p></article>
+        <article class="step"><div class="num">STEP 04</div><h3>결과 확인</h3><p>입금 확인 후 검사가 진행되며 결과는 일반적으로 약 3영업일 내 안내합니다.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="price">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">TIME & PRICE</span>
+        <h2>소요시간 · 검사비용</h2>
+        <p>현재 안내 기준의 기본 검사비용과 결과 안내 시간을 확인하세요.</p>
+      </div>
+      <div class="price-wrap">
+        <div class="price-card">
+          <div class="small">DNA 성별검사</div>
+          <div class="price">15,000원</div>
+          <ul>
+            <li>1개체 기준</li>
+            <li>선입금 후 검사 진행</li>
+            <li>입금 확인 후 샘플 접수</li>
+            <li>결과는 일반적으로 약 3영업일</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>검사 안내</h3>
+          <div class="info-row"><span>기본 검사비</span><b>15,000원</b></div>
+          <div class="info-row"><span>일반적인 결과 기간</span><b>약 3영업일</b></div>
+          <div class="info-row"><span>재검사</span><b>샘플 상태에 따라 진행</b></div>
+          <div class="info-row"><span>결과 전달</span><b>카카오톡 / 문자</b></div>
+          <div class="info-row"><span>이메일 전달</span><b>요청 시 가능</b></div>
+          <div class="notice">※ 샘플의 DNA 양이나 상태에 따라 검사 또는 재검에 시간이 더 걸릴 수 있습니다.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sample">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">SAMPLE COLLECTION</span>
+        <h2>샘플채취방법</h2>
+        <p>샘플은 검사 결과에 영향을 줄 수 있으므로 안내된 방법을 정확하게 따라주세요.</p>
+      </div>
+      <div class="sample-grid">
+        <article class="sample">
+          <h3>🪶 깃털 샘플</h3>
+          <ol>
+            <li>검사 대상 개체를 안전하게 잡습니다.</li>
+            <li>검사에 적합한 새 깃털을 안내에 따라 준비합니다.</li>
+            <li>깃털의 오염을 피하고 개체별로 혼합되지 않도록 구분합니다.</li>
+            <li>개체 정보와 샘플을 정확하게 연결하여 포장합니다.</li>
+          </ol>
+        </article>
+        <article class="sample">
+          <h3>🩸 혈액 샘플</h3>
+          <ol>
+            <li>혈액 채취가 가능한 경우 안전한 방법으로 준비합니다.</li>
+            <li>채취 과정에서 오염과 개체 간 혼동이 없도록 합니다.</li>
+            <li>샘플이 건조·변질되지 않도록 안내받은 방식으로 보관합니다.</li>
+            <li>발송 전 검사 대상 개체 정보를 다시 확인합니다.</li>
+          </ol>
+        </article>
+      </div>
+      <div class="notice">※ 처음 샘플을 채취하시는 경우에는 임의로 진행하지 마시고 먼저 센터에 문의하여 개체와 샘플 종류에 맞는 방법을 안내받으시기 바랍니다.</div>
+    </div>
+  </section>
+
+  <section id="faq" class="process">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">FAQ</span>
+        <h2>자주하는질문</h2>
+        <p>앵무새 DNA 성별검사에 대해 자주 문의하시는 내용을 정리했습니다.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Q. 모든 앵무새의 성별을 DNA로 검사할 수 있나요?</summary>
+          <p>종과 샘플 상태에 따라 검사 가능 여부가 달라질 수 있습니다. 검사 전 종명을 알려주시면 확인 후 안내해드립니다.</p>
+        </details>
+        <details>
+          <summary>Q. 검사 결과는 얼마나 걸리나요?</summary>
+          <p>일반적으로 약 3영업일을 기준으로 안내하며, 샘플 상태나 재검 여부에 따라 더 오래 걸릴 수 있습니다.</p>
+        </details>
+        <details>
+          <summary>Q. 샘플의 DNA가 부족하면 어떻게 하나요?</summary>
+          <p>샘플의 DNA가 충분하지 않아 재검이 필요한 경우가 있습니다. 상황에 따라 재검 안내를 드립니다.</p>
+        </details>
+        <details>
+          <summary>Q. 결과를 다시 받을 수 있나요?</summary>
+          <p>네. 결과 전달 후 필요한 경우 카카오톡이나 문자로 다시 안내받을 수 있으며, 이메일 전달도 요청할 수 있습니다.</p>
+        </details>
+        <details>
+          <summary>Q. 여러 마리를 한 번에 의뢰할 수 있나요?</summary>
+          <p>가능합니다. 여러 개체를 의뢰하는 경우 개체별 샘플이 섞이지 않도록 정확하게 구분해 주세요.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div>
+          <span class="tag">CONTACT</span>
+          <h2>검사 문의 및 의뢰</h2>
+          <p style="color:var(--muted)">
+            검사 대상 앵무새의 종류와 개체 수를 알려주시면
+            샘플 준비 및 의뢰 방법을 안내해드립니다.
+          </p>
+          <a class="btn btn-primary" href="#home">홈으로 돌아가기</a>
+        </div>
+        <div class="contact-list">
+          <div class="contact-item"><b>카카오톡</b>카카오톡 문의는 운영자에게 확인 후 연결 정보를 입력해 주세요.</div>
+          <div class="contact-item"><b>전화 / 문자</b>전화번호를 입력해 주세요.</div>
+          <div class="contact-item"><b>이메일</b>이메일 주소를 입력해 주세요.</div>
+          <div class="contact-item"><b>주소</b>방문 또는 샘플 발송 주소를 입력해 주세요.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-flex">
+    <div><strong>앵무새성별검사센터</strong><br>Parrot DNA Sex Determination Center</div>
+    <div>© <span id="year"></span> Parrot Sexing Center. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.querySelectorAll(".menu a").forEach(function(link){
+    link.addEventListener("click", function(){
+      document.querySelector(".menu").classList.remove("open");
+    });
+  });
+</script>
+</body>
+</html>
