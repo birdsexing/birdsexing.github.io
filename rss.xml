@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>앵무새성별검사센터</title>
+    <link>https://birdsexing.github.io/</link>
+    <description>앵무새 DNA 성별검사 전문기관. 앵무새성별검사, DNA 성별검사, 검사 의뢰절차, 비용 및 샘플채취방법을 안내합니다.</description>
+    <language>ko</language>
+    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0900</lastBuildDate>
+
+    <item>
+      <title>앵무새성별검사센터 - 앵무새 DNA 성별검사</title>
+      <link>https://birdsexing.github.io/</link>
+      <description>앵무새 DNA 성별검사 전문 안내. 앵무새성별검사 방법, 의뢰절차, 검사 비용, 소요시간, 샘플채취방법 및 자주하는 질문을 확인할 수 있습니다.</description>
+      <guid>https://birdsexing.github.io/</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+
+  </channel>
+</rss>
