@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://birdsexing.github.io/sitemap.xml
