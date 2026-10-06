@@ -147,7 +147,7 @@
       background:var(--accent)
     }
 
-    /* 🔴 변경 부분: Since2018. 전용 스타일 */
+    /* Since2018. 전용 스타일 */
     .since{
       display:block;
       color:var(--green);
@@ -324,6 +324,31 @@
       border-radius:10px;
       left:91px;
       top:243px
+    }
+
+    /* MALE? or FEMALE 중앙 문구 */
+    .sex-question{
+      position:absolute;
+      z-index:6;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      width:100%;
+      text-align:center;
+      color:#c62828;
+      font-size:32px;
+      font-weight:900;
+      letter-spacing:-.03em;
+      text-shadow:
+        0 2px 4px rgba(255,255,255,.95),
+        0 0 2px rgba(255,255,255,.95);
+    }
+
+    .sex-question span{
+      font-size:22px;
+      font-weight:800;
+      margin:0 5px;
+      color:#a51f1f;
     }
 
     .dna-card{
@@ -691,6 +716,14 @@
         transform:scale(.82) rotate(-3deg)
       }
 
+      .sex-question{
+        font-size:25px;
+      }
+
+      .sex-question span{
+        font-size:18px;
+      }
+
       .price{
         font-size:38px
       }
@@ -742,7 +775,6 @@
 
       <div>
 
-        <!-- 🔴 변경: (Since2018.)에서 eyebrow 제거 -->
         <div class="since">SINCE2018.</div>
 
         <div class="eyebrow">PARROT DNA SEX DETERMINATION</div>
@@ -786,6 +818,8 @@
         </div>
 
         <div class="eyebrow">PARROT DNA SEX DETERMINATION</div>
+
+        <div class="sex-question">MALE? <span>or</span> FEMALE</div>
 
       </div>
 
