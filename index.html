@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="naver-site-verification" content="9a29ef4cdc7707aad02729d6d8b69097520a7f88" />
   <meta name="google-site-verification" content="lVCVptigEwirtCQydVfBKGt6T7lWmrU3FFUeP6pk1Mc" />
 
@@ -34,11 +35,11 @@
     }
 
     *{
-      box-sizing:border-box
+      box-sizing:border-box;
     }
 
     html{
-      scroll-behavior:smooth
+      scroll-behavior:smooth;
     }
 
     body{
@@ -51,12 +52,12 @@
 
     a{
       color:inherit;
-      text-decoration:none
+      text-decoration:none;
     }
 
     .container{
       width:min(1120px,92%);
-      margin:auto
+      margin:auto;
     }
 
     header{
@@ -82,7 +83,7 @@
       gap:11px;
       font-weight:800;
       color:var(--green-dark);
-      font-size:18px
+      font-size:18px;
     }
 
     .logo-mark{
@@ -98,11 +99,11 @@
       align-items:center;
       font-size:14px;
       font-weight:600;
-      color:#43534d
+      color:#43534d;
     }
 
     .menu a:hover{
-      color:var(--green)
+      color:var(--green);
     }
 
     .menu-btn{
@@ -110,7 +111,7 @@
       border:0;
       background:transparent;
       font-size:27px;
-      cursor:pointer
+      cursor:pointer;
     }
 
     .hero{
@@ -126,7 +127,7 @@
       display:grid;
       grid-template-columns:1.08fr .92fr;
       gap:52px;
-      align-items:center
+      align-items:center;
     }
 
     .eyebrow{
@@ -144,10 +145,9 @@
       content:"";
       width:28px;
       height:2px;
-      background:var(--accent)
+      background:var(--accent);
     }
 
-    /* Since2018. 전용 스타일 */
     .since{
       display:block;
       color:var(--green);
@@ -162,20 +162,20 @@
       line-height:1.13;
       letter-spacing:-.045em;
       margin:0 0 22px;
-      color:var(--green-dark)
+      color:var(--green-dark);
     }
 
     .hero p{
       font-size:17px;
       color:#53635c;
       max-width:620px;
-      margin:0 0 30px
+      margin:0 0 30px;
     }
 
     .buttons{
       display:flex;
       gap:12px;
-      flex-wrap:wrap
+      flex-wrap:wrap;
     }
 
     .btn{
@@ -193,18 +193,18 @@
     .btn-primary{
       background:var(--green);
       color:#fff;
-      box-shadow:0 8px 20px rgba(31,107,85,.20)
+      box-shadow:0 8px 20px rgba(31,107,85,.20);
     }
 
     .btn-primary:hover{
       background:var(--green-dark);
-      transform:translateY(-1px)
+      transform:translateY(-1px);
     }
 
     .btn-light{
       background:#fff;
       border-color:var(--line);
-      color:var(--green-dark)
+      color:var(--green-dark);
     }
 
     .hero-art{
@@ -232,7 +232,7 @@
       height:250px;
       background:#dff1e8;
       top:-70px;
-      right:-50px
+      right:-50px;
     }
 
     .hero-art:after{
@@ -240,7 +240,7 @@
       height:190px;
       background:#f6e7bd;
       bottom:-70px;
-      left:-50px
+      left:-50px;
     }
 
     .bird{
@@ -323,10 +323,9 @@
       background:#a76d38;
       border-radius:10px;
       left:91px;
-      top:243px
+      top:243px;
     }
 
-    /* MALE? or FEMALE 중앙 문구 */
     .sex-question{
       position:absolute;
       z-index:6;
@@ -363,23 +362,24 @@
       box-shadow:0 9px 25px rgba(0,0,0,.08);
       font-size:13px;
       font-weight:800;
-      color:var(--green-dark)
+      color:var(--green-dark);
     }
 
     section{
-      padding:82px 0
+      padding:82px 0;
     }
 
     .section-head{
       text-align:center;
       max-width:700px;
-      margin:0 auto 42px
+      margin:0 auto 42px;
+      position:relative;
     }
 
     .section-head .tag{
       color:var(--green);
       font-size:13px;
-      font-weight:800
+      font-weight:800;
     }
 
     h2{
@@ -387,18 +387,41 @@
       line-height:1.25;
       letter-spacing:-.035em;
       margin:8px 0 12px;
-      color:var(--green-dark)
+      color:var(--green-dark);
     }
 
     .section-head p{
       margin:0;
-      color:var(--muted)
+      color:var(--muted);
+    }
+
+    /* 샘플채취 방법 자세히 보기 버튼 */
+    .sample-detail-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      margin-top:18px;
+      padding:10px 17px;
+      border-radius:999px;
+      background:var(--green);
+      color:#fff;
+      font-size:13px;
+      font-weight:800;
+      border:1px solid var(--green);
+      transition:.2s;
+      box-shadow:0 5px 15px rgba(31,107,85,.16);
+    }
+
+    .sample-detail-btn:hover{
+      background:var(--green-dark);
+      border-color:var(--green-dark);
+      transform:translateY(-1px);
     }
 
     .cards{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:18px
+      gap:18px;
     }
 
     .card{
@@ -424,94 +447,94 @@
     .card h3{
       margin:0 0 8px;
       font-size:19px;
-      color:var(--green-dark)
+      color:var(--green-dark);
     }
 
     .card p{
       margin:0;
       color:var(--muted);
-      font-size:14px
+      font-size:14px;
     }
 
     .process{
-      background:#f2f8f5
+      background:#f2f8f5;
     }
 
     .steps{
       display:grid;
       grid-template-columns:repeat(4,1fr);
-      gap:16px
+      gap:16px;
     }
 
     .step{
       background:#fff;
       border:1px solid var(--line);
       border-radius:20px;
-      padding:25px
+      padding:25px;
     }
 
     .num{
       font-size:13px;
       color:var(--accent);
       font-weight:900;
-      letter-spacing:.08em
+      letter-spacing:.08em;
     }
 
     .step h3{
       margin:6px 0 8px;
       color:var(--green-dark);
-      font-size:18px
+      font-size:18px;
     }
 
     .step p{
       margin:0;
       color:var(--muted);
-      font-size:14px
+      font-size:14px;
     }
 
     .price-wrap{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:22px;
-      align-items:stretch
+      align-items:stretch;
     }
 
     .price-card{
       background:var(--green-dark);
       color:#fff;
       border-radius:28px;
-      padding:35px
+      padding:35px;
     }
 
     .price-card .small{
       opacity:.75;
-      font-size:13px
+      font-size:13px;
     }
 
     .price{
       font-size:46px;
       font-weight:900;
       letter-spacing:-.04em;
-      margin:7px 0 16px
+      margin:7px 0 16px;
     }
 
     .price-card ul{
       padding-left:20px;
       margin:0;
       color:#e7f2ed;
-      font-size:14px
+      font-size:14px;
     }
 
     .info-card{
       background:#fff;
       border:1px solid var(--line);
       border-radius:28px;
-      padding:32px
+      padding:32px;
     }
 
     .info-card h3{
       color:var(--green-dark);
-      margin-top:0
+      margin-top:0;
     }
 
     .info-row{
@@ -520,39 +543,39 @@
       gap:20px;
       padding:12px 0;
       border-bottom:1px solid #edf2ef;
-      font-size:14px
+      font-size:14px;
     }
 
     .info-row:last-child{
-      border-bottom:0
+      border-bottom:0;
     }
 
     .info-row b{
-      color:var(--green-dark)
+      color:var(--green-dark);
     }
 
     .sample-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:20px
+      gap:20px;
     }
 
     .sample{
       background:#fff;
       border:1px solid var(--line);
       border-radius:24px;
-      padding:30px
+      padding:30px;
     }
 
     .sample h3{
       color:var(--green-dark);
-      margin-top:0
+      margin-top:0;
     }
 
     .sample ol{
       padding-left:21px;
       color:var(--muted);
-      font-size:14px
+      font-size:14px;
     }
 
     .notice{
@@ -562,12 +585,12 @@
       border-radius:17px;
       padding:16px 18px;
       font-size:13px;
-      color:#6d5729
+      color:#6d5729;
     }
 
     .faq{
       max-width:850px;
-      margin:auto
+      margin:auto;
     }
 
     details{
@@ -575,25 +598,25 @@
       border:1px solid var(--line);
       border-radius:16px;
       margin-bottom:11px;
-      padding:0 20px
+      padding:0 20px;
     }
 
     summary{
       cursor:pointer;
       padding:19px 0;
       font-weight:800;
-      color:var(--green-dark)
+      color:var(--green-dark);
     }
 
     details p{
       margin:0;
       padding:0 0 20px;
       color:var(--muted);
-      font-size:14px
+      font-size:14px;
     }
 
     .contact{
-      background:linear-gradient(135deg,#edf7f2,#fff)
+      background:linear-gradient(135deg,#edf7f2,#fff);
     }
 
     .contact-box{
@@ -604,50 +627,51 @@
       display:grid;
       grid-template-columns:1.1fr .9fr;
       gap:30px;
-      box-shadow:var(--shadow)
+      box-shadow:var(--shadow);
     }
 
     .contact-box h2{
-      margin-top:0
+      margin-top:0;
     }
 
     .contact-list{
       display:grid;
-      gap:12px
+      gap:12px;
     }
 
     .contact-item{
       padding:14px 16px;
       background:#f6faf8;
       border-radius:14px;
-      font-size:14px
+      font-size:14px;
     }
 
     .contact-item b{
       display:block;
       color:var(--green-dark);
-      margin-bottom:2px
+      margin-bottom:2px;
     }
 
     footer{
       background:#143d32;
       color:#cfe0da;
       padding:34px 0;
-      font-size:13px
+      font-size:13px;
     }
 
     footer strong{
-      color:#fff
+      color:#fff;
     }
 
     .footer-flex{
       display:flex;
       justify-content:space-between;
       gap:20px;
-      align-items:center
+      align-items:center;
     }
 
     @media(max-width:850px){
+
       .menu{
         display:none;
         position:absolute;
@@ -660,60 +684,61 @@
         border-radius:18px;
         box-shadow:var(--shadow);
         flex-direction:column;
-        align-items:stretch
+        align-items:stretch;
       }
 
       .menu.open{
-        display:flex
+        display:flex;
       }
 
       .menu a{
-        padding:8px 10px
+        padding:8px 10px;
       }
 
       .menu-btn{
-        display:block
+        display:block;
       }
 
       .hero-grid,
       .price-wrap,
       .sample-grid,
       .contact-box{
-        grid-template-columns:1fr
+        grid-template-columns:1fr;
       }
 
       .cards{
-        grid-template-columns:1fr
+        grid-template-columns:1fr;
       }
 
       .steps{
-        grid-template-columns:1fr 1fr
+        grid-template-columns:1fr 1fr;
       }
 
       .hero{
-        padding-top:55px
+        padding-top:55px;
       }
 
       .hero-art{
-        min-height:330px
+        min-height:330px;
       }
     }
 
     @media(max-width:520px){
+
       .steps{
-        grid-template-columns:1fr
+        grid-template-columns:1fr;
       }
 
       section{
-        padding:62px 0
+        padding:62px 0;
       }
 
       .hero-art{
-        min-height:290px
+        min-height:290px;
       }
 
       .bird{
-        transform:scale(.82) rotate(-3deg)
+        transform:scale(.82) rotate(-3deg);
       }
 
       .sex-question{
@@ -725,7 +750,7 @@
       }
 
       .price{
-        font-size:38px
+        font-size:38px;
       }
 
       .contact-box,
@@ -733,12 +758,18 @@
       .info-card,
       .sample,
       .card{
-        padding:24px
+        padding:24px;
       }
 
       .footer-flex{
         flex-direction:column;
-        align-items:flex-start
+        align-items:flex-start;
+      }
+
+      .sample-detail-btn{
+        margin-top:16px;
+        font-size:12px;
+        padding:9px 15px;
       }
     }
   </style>
@@ -788,13 +819,13 @@
         <p>
           외형만으로 성별을 구별하기 어려운 앵무새를 대상으로
           DNA를 이용한 앵무새 성별검사 서비스를 제공합니다.
-          앵무새 성별검사의 의뢰부터 샘플채취, 결과 확인까지 필요한 내용을 안내 합니다.<br>
-
-          <h2>
-            앵무새성별검사센터<br>
-            t.010-9370-1621
-          </h2>
+          앵무새 성별검사의 의뢰부터 샘플채취, 결과 확인까지 필요한 내용을 안내 합니다.
         </p>
+
+        <h2>
+          앵무새성별검사센터<br>
+          t.010-9370-1621
+        </h2>
 
         <div class="buttons">
           <a class="btn btn-light" href="#process">검사 의뢰방법</a>
@@ -894,7 +925,7 @@
           <div class="num">STEP 02</div>
           <h3>샘플 채취</h3>
           <p>
-            깃털 또는 혈액 샘플을 오염없이 지퍼백에 담아 준비합니다.특히, 깃털의 모낭부분은 만지지 않습니다.
+            깃털 또는 혈액 샘플을 오염없이 지퍼백에 담아 준비합니다. 특히, 깃털의 모낭부분은 만지지 않습니다.
           </p>
         </article>
 
@@ -990,11 +1021,25 @@
     <div class="container">
 
       <div class="section-head">
+
         <span class="tag">SAMPLE COLLECTION</span>
+
         <h2>샘플채취방법</h2>
+
         <p>
           앵무새 성별검사 샘플 채취 방법에 대해 안내합니다.
         </p>
+
+        <!-- 네이버 블로그 상세 안내 버튼 -->
+        <a
+          class="sample-detail-btn"
+          href="https://blog.naver.com/PostList.nhn?blogId=birdsexing&from=postList&categoryNo=14"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          샘플채취 방법 자세히 보기
+        </a>
+
       </div>
 
       <div class="sample-grid">
@@ -1009,7 +1054,7 @@
               깃털(모낭)의 오염을 피하고 개체별로 섞이지 않도록 지퍼백에 넣어 구분합니다.
             </li>
             <li>
-              각각의 개체 정보를 지퍼백에 적고와 신청 정보도 함께 작성합니다.
+              각각의 개체 정보를 지퍼백에 적고 신청 정보도 함께 작성합니다.
             </li>
           </ol>
         </article>
@@ -1019,12 +1064,12 @@
 
           <ol>
             <li>혈액 채취가 가능한 경우 안전한 방법으로 준비합니다.</li>
-            <li>혈액을 면봉 또는 종이에 뭍여 지퍼백에 담습니다.</li>
+            <li>혈액을 면봉 또는 종이에 묻혀 지퍼백에 담습니다.</li>
             <li>
-              채취 과정에서 교차오염등에 주의 하며, 개체별로 섞이지 않도록 지퍼백에 넣어 구분합니다.
+              채취 과정에서 교차오염 등에 주의하며, 개체별로 섞이지 않도록 지퍼백에 넣어 구분합니다.
             </li>
             <li>
-              각각의 개체 정보를 지퍼백에 적고와 신청 정보도 함께 작성합니다.
+              각각의 개체 정보를 지퍼백에 적고 신청 정보도 함께 작성합니다.
             </li>
           </ol>
         </article>
