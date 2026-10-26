@@ -279,7 +279,7 @@
       left: -50px;
     }
 
-    /* 이미지 아래 공지사항 박스 */
+    /* 공지사항 박스 */
     .home-notice {
       background: #fff;
       border: 1px solid var(--line);
@@ -289,17 +289,35 @@
       box-shadow: 0 8px 28px rgba(22,75,61,.07);
     }
 
+    /* 공지사항 제목과 앞뒤 금색 줄 */
     .home-notice h2 {
-      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      margin: 0 0 14px;
       font-size: 21px;
+      font-weight: 800;
       color: var(--green-dark);
       line-height: 1.4;
+      letter-spacing: .02em;
     }
 
+    .home-notice h2::before,
+    .home-notice h2::after {
+      content: "";
+      display: block;
+      flex: 0 0 28px;
+      width: 28px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    /* 공지사항 내용 글자 크기 확대 */
     .home-notice-content {
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.8;
+      font-size: 17px;
+      line-height: 1.9;
       white-space: pre-line;
       overflow-wrap: anywhere;
     }
@@ -695,6 +713,15 @@
         font-size: 12px;
         padding: 9px 15px;
       }
+
+      /* 휴대전화에서 공지사항 글자 크기 유지 */
+      .home-notice-content {
+        font-size: 17px;
+      }
+
+      .home-notice {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -751,7 +778,7 @@
           010-9370-1621
         </h2>
 
-        <!-- 첫 화면 주소 -->
+        <!-- 추가된 주소 -->
         <p class="hero-address">
           우)34330. 대전광역시 대덕구 덕암북로70번길19 2층202호
         </p>
