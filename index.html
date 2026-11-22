@@ -626,6 +626,37 @@
       align-items: center;
     }
 
+    /* 맨 위로 이동 버튼 */
+    #backToTop {
+      display: none;
+      position: fixed;
+      right: 22px;
+      bottom: 28px;
+      z-index: 9999;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      font-size: 27px;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(22,75,61,.25);
+      transition: background .2s, transform .2s;
+    }
+
+    #backToTop:hover {
+      background: var(--green-dark);
+      transform: translateY(-3px);
+    }
+
+    #backToTop:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
     @media (max-width: 850px) {
       .menu {
         display: none;
@@ -722,6 +753,13 @@
       .home-notice {
         padding: 20px;
       }
+
+      #backToTop {
+        right: 15px;
+        bottom: 18px;
+        width: 44px;
+        height: 44px;
+      }
     }
   </style>
 </head>
@@ -778,7 +816,7 @@
           010-9370-1621
         </h2>
 
-        <!-- 추가된 주소 -->
+        <!-- 첫 화면 주소 -->
         <p class="hero-address">
           우)34330. 대전광역시 대덕구 덕암북로70번길19 2층202호
         </p>
@@ -1178,12 +1216,39 @@
   </div>
 </footer>
 
+<!-- 맨 위로 이동 버튼 -->
+<button id="backToTop" type="button"
+        aria-label="맨 위로 이동" title="맨 위로 이동">↑</button>
+
 <script>
+  // 현재 연도 표시
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  // 모바일 메뉴를 누르면 메뉴 닫기
   document.querySelectorAll(".menu a").forEach(function(link) {
     link.addEventListener("click", function() {
       document.querySelector(".menu").classList.remove("open");
+    });
+  });
+
+  // 맨 위로 이동 버튼
+  const backToTopButton = document.getElementById("backToTop");
+
+  // 300px 이상 아래로 스크롤하면 버튼 표시
+  function updateBackToTopButton() {
+    backToTopButton.style.display =
+      window.scrollY > 300 ? "flex" : "none";
+  }
+
+  window.addEventListener("scroll", updateBackToTopButton, {
+    passive: true
+  });
+
+  // 버튼을 누르면 맨 위로 부드럽게 이동
+  backToTopButton.addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
   });
 </script>
