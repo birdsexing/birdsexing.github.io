@@ -628,27 +628,41 @@
 
     /* 맨 위로 이동 버튼 */
     #backToTop {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    margin: 0;
-    border: none;
-    border-radius: 50%;
-    background: #2e7d32;
-    color: white;
-    font-size: 28px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    line-height: 48px;
-    text-align: center;
-    display: none;
-    cursor: pointer;
-    z-index: 9999;
-    box-sizing: border-box;
-}
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      margin: 0;
+      border: none;
+      border-radius: 50%;
+      background: #2e7d32;
+      color: white;
+
+      /* 화살표를 원의 정중앙에 배치 */
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+      z-index: 9999;
+      box-sizing: border-box;
+
+      transition: background .2s, transform .2s;
+    }
+
+    /* SVG 화살표 */
+    #backToTop svg {
+      display: block;
+      width: 25px;
+      height: 25px;
+      stroke: currentColor;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
 
     #backToTop:hover {
       background: var(--green-dark);
@@ -762,6 +776,11 @@
         bottom: 18px;
         width: 44px;
         height: 44px;
+      }
+
+      #backToTop svg {
+        width: 24px;
+        height: 24px;
       }
     }
   </style>
@@ -1221,7 +1240,14 @@
 
 <!-- 맨 위로 이동 버튼 -->
 <button id="backToTop" type="button"
-        aria-label="맨 위로 이동" title="맨 위로 이동">↑</button>
+        aria-label="맨 위로 이동" title="맨 위로 이동">
+
+  <!-- 중앙 정렬된 굵은 화살표 -->
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 19 V5 M5.5 11.5 L12 5 L18.5 11.5"/>
+  </svg>
+
+</button>
 
 <script>
   // 현재 연도 표시
@@ -1254,6 +1280,9 @@
       behavior: "smooth"
     });
   });
+
+  // 페이지가 처음 열릴 때 버튼 표시 여부 확인
+  updateBackToTopButton();
 </script>
 
 </body>
